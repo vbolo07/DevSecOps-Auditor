@@ -1,0 +1,30 @@
+ linux:
+  ssh:
+    password_authentication: False
+    permit_root_login: False
+    permit_empty_passwords: False
+    x11_forwarding: False
+    max_auth_tries: 3
+  sudo:
+    allow_nopasswd: False
+  disk_health:
+    disk_usage_threshold: 80
+  firewall:
+    enabled: True
+  network:
+    allowed_ports:
+      - 22
+      - 80
+      - 443
+  users:
+    allowed_uid_zero:
+      - root
+  permissions:
+    world_writable_files: False
+  services:
+    forbidden:
+      - telnet.service
+      - ftp.service
+      - bluetooth.service
+  updates:
+    unattended_upgrades: True

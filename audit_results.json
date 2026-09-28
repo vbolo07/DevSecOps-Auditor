@@ -1,0 +1,84 @@
+{
+  "target": "node1",
+  "summary": {
+    "pass": 10,
+    "fail": 5
+  },
+  "checks": [
+    {
+      "name": "ssh_password_authentication",
+      "status": "PASS",
+      "message": "Password authentication is disabled"
+    },
+    {
+      "name": "permit_root_login",
+      "status": "FAIL",
+      "message": "Root login is enabled with ssh-key"
+    },
+    {
+      "name": "permit_empty_passwords",
+      "status": "PASS",
+      "message": "Empty passwords are disabled"
+    },
+    {
+      "name": "x11_forwarding",
+      "status": "FAIL",
+      "message": "X11 Forwarding is enabled"
+    },
+    {
+      "name": "max_auth_tries",
+      "status": "FAIL",
+      "message": "More Auth Tries than expected!"
+    },
+    {
+      "name": "SSH Protocol",
+      "status": "PASS",
+      "message": "SSH protocol 1 is not supported by this OpenSSH version."
+    },
+    {
+      "name": "firewall",
+      "status": "PASS",
+      "message": "Firewall is enabled"
+    },
+    {
+      "name": "allowed_ports",
+      "status": "FAIL",
+      "message": "There are some unexpected open ports listening: [53, 41993]"
+    },
+    {
+      "name": "forbidden_services",
+      "status": "PASS",
+      "message": "NO forbidden services enabled"
+    },
+    {
+      "name": "Failed Services",
+      "status": "PASS",
+      "message": "No failed services found."
+    },
+    {
+      "name": "world_writable_files",
+      "status": "PASS",
+      "message": "No vulnerable writable files"
+    },
+    {
+      "name": "allow_nopasswd",
+      "status": "FAIL",
+      "message": "NOPASSWD rules detected, check them:['/etc/sudoers.d/deploy:deploy ALL=(ALL) NOPASSWD:ALL']"
+    },
+    {
+      "name": "unattended_upgrades",
+      "status": "PASS",
+      "message": "Unattended upgrades enabled"
+    },
+    {
+      "name": "allowed_uid_zero",
+      "status": "PASS",
+      "message": "Root has UID 0, All good!"
+    },
+    {
+      "name": "dish_usage_threshold",
+      "status": "PASS",
+      "message": "Disk usage is 15 and in the limit."
+    }
+  ]
+}

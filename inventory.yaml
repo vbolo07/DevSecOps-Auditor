@@ -1,0 +1,8 @@
+targets:
+  node1:
+    host: 192.168.56.101
+    user: deploy
+
+  node2:
+    host: 192.168.56.102
+    user: deploy
